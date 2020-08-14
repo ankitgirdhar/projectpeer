@@ -20,20 +20,20 @@ public class Audit {
     @Column(updatable = false)
     @Getter
     @Setter
-    private Date created_At;
+    private Date createdAt;
 
     @JsonFormat(pattern = "yyyy-mm-dd")
     @Getter
     @Setter
-    private Date updated_At;
+    private Date updatedAt;
 
     @PrePersist
     protected void onCreate() {
-        this.created_At = new Date();
+        this.createdAt = new Date();
     }
 
     @PreUpdate
     protected void onUpdate() {
-        this.updated_At = new Date();
+        this.updatedAt = new Date();
     }
 }

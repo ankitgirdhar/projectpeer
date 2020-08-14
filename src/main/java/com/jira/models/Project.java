@@ -1,5 +1,6 @@
 package com.jira.models;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
@@ -48,7 +49,7 @@ public class Project extends Audit{
 
 
     @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy = "project")
-    @JsonIgnore
+    @JsonBackReference
     @Getter
     @Setter
     private Backlog backlog;

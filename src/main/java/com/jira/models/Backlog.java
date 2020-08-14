@@ -1,5 +1,6 @@
 package com.jira.models;
 
+import com.fasterxml.jackson.annotation.JsonIdentityReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.Getter;
@@ -20,7 +21,7 @@ public class Backlog extends Audit{
     @Setter
     private String projectIdentifier;
 
-    @JsonIgnore
+    @JsonIdentityReference
     @OneToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "project_id", nullable = false)
     @Getter
