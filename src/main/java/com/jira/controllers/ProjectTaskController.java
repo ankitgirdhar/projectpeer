@@ -16,7 +16,7 @@ import java.security.Principal;
 @RestController
 @RequestMapping("/api/backlog")
 @CrossOrigin
-public class BacklogController {
+public class ProjectTaskController {
 
     @Autowired
     private ProjectTaskService projectTaskService;

@@ -54,17 +54,4 @@ public class ProjectTask extends Audit{
     public ProjectTask() {
     }
 
-    @Override
-    public String toString() {
-        return "ProjectTask{" +
-                "projectSequence='" + projectSequence + '\'' +
-                ", summary='" + summary + '\'' +
-                ", acceptanceCriteria='" + acceptanceCriteria + '\'' +
-                ", status='" + status + '\'' +
-                ", priority=" + priority +
-                ", dueDate=" + dueDate +
-                ", projectIdentifier='" + projectIdentifier + '\'' +
-                ", backlog=" + backlog +
-                '}';
-    }
 }
